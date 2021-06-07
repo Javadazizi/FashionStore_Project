@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using DiscountManagement.Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +28,7 @@ namespace ServiceHost
         {
             var connectionString = Configuration.GetConnectionString("FashionStoreDb");
             ShopManagementBoostrapper.Configur(services, connectionString);
-
+            DiscountManagementBootstrapper.Configur(services, connectionString);
             services.AddTransient<IFileUploader, FileUploader>();
 
             services.AddRazorPages();
