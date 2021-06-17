@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _0_Framework.Application
 {
-   public class MaxFileSizeAttribute : ValidationAttribute , IClientModelValidator
+    public class MaxFileSizeAttribute : ValidationAttribute, IClientModelValidator
     {
         private readonly int _maxFileSize;
 

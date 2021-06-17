@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _01_FashionStoreQuery.Contract.Product;
+using _01_FashionStoreQuery.Contract.ProductCategory;
+using _01_FashionStoreQuery.Contract.Slide;
+using _01_FashionStoreQuery.Query;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
 using ShopManagement.Application.Contracts.Product;
@@ -30,6 +34,10 @@ namespace ShopManagement.Infrastructure.Configuration
 
             services.AddTransient<ISlideRepository, SlideRepository>();
             services.AddTransient<ISlideApplication, SlideApplication>();
+
+            services.AddTransient<ISlideQuery, SlideQuery>();
+            services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
+            services.AddTransient<IProductQuery, ProductQuery>();
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }
     }

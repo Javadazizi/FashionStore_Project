@@ -2081,6 +2081,22 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_FashionStoreQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
+          "DiscountManagement.Infrastructure.EFCore": "1.0.0",
+          "InventoryManagement.Infrastructure.EFCore": "1.0.0",
+          "ShopManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_FashionStoreQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_FashionStoreQuery.dll": {}
+        }
+      },
       "0_Framework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2359,6 +2375,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "01_FashionStoreQuery": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
@@ -7616,6 +7633,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "01_FashionStoreQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_FashionStoreQuery/01_FashionStoreQuery.csproj",
+      "msbuildProject": "../01_FashionStoreQuery/01_FashionStoreQuery.csproj"
+    },
     "0_Framework/1.0.0": {
       "type": "project",
       "path": "../0_Framework/0_Framework.csproj",
@@ -7724,6 +7746,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "01_FashionStoreQuery >= 1.0.0",
       "BlogManagement.Infrastructure.Configuration >= 1.0.0",
       "DiscountManagement.Infrastructure.Configuration >= 1.0.0",
       "InventoryManagement.Infrastructure.Configuration >= 1.0.0",
@@ -7759,6 +7782,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\HP\\Desktop\\UniProject\\FashionStore\\01_FashionStoreQuery\\01_FashionStoreQuery.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\UniProject\\FashionStore\\01_FashionStoreQuery\\01_FashionStoreQuery.csproj"
+            },
             "C:\\Users\\HP\\Desktop\\UniProject\\FashionStore\\BlogManagement.Infrastructure.Configuration\\BlogManagement.Infrastructure.Configuration.csproj": {
               "projectPath": "C:\\Users\\HP\\Desktop\\UniProject\\FashionStore\\BlogManagement.Infrastructure.Configuration\\BlogManagement.Infrastructure.Configuration.csproj"
             },
@@ -7813,7 +7839,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,50 +1,176 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ServiceHost</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Theme/assets/css/Custom1.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>فروشگاه</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ServiceHost</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <div class="menu">
+            <div class="menu-center">
+                <div class="logo">
+                    <a href="#"><img src="~/Theme/assets/image/logo/6834.png"></a>
+                </div>
+                <div style="width:78%;position: relative;">
+                    <div class="menu-items">
+                        <ul>
+                            <li class="menu-item"><a href="index1.html">صفحه اصلی</a></li>
+                            <li><a href="Product.html">محصولات</a></li>
+                            <li><a href="#">مردانه</a></li>
+                            <li><a href="#">زنانه</a></li>
+                            <li><a href="#">بچه گانه</a></li>
+                            <li><a href="AboutUs.html">درباره ما</a></li>
+                            <li><a href="ContactUs.html">ارتباط با ما</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-register">
+                        <a class="register" href="Login.html">ورود</a>
+                        <span style="color: rgb(238, 120, 120);font-weight: 900;">|</span>
+                        <a class="register" href="SignUp.html">عضویت</a>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ServiceHost - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <div class="mobile-menu">
+                <label for="mobile-btn">
+                    <i class="fas fa-bars mobile-icon"></i>
+                </label>
+                <input id="mobile-btn" type="checkbox">
+                <ul class="mobile-items">
+                    <li class="mobile-item"><a href="#">صفحه اصلی</a></li>
+                    <li><a href="#">محصولات</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">ارتباط با ما</a></li>
+                    <li><a href="#">عضویت | ورود</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
+        
+    </header>
+    <!-- End -->
+    @RenderBody()
+    <br><br><br>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>خرید</h1>
+                <ul>
+                    <li>زنانه</li>
+                    <li>مردانه</li>
+                    <li>بچگانه</li>
+                    <li>زیبایی و سلامت</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>خدمات مشتریان</h1>
+                <ul>
+                    <li>پاسخ به پرسش های متداول</li>
+                    <li>رویه های بازگرداندن کالا</li>
+                    <li>شرایط استفاده</li>
+                    <li>حریم خصوصی</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>اطلاعات ما</h1>
+                <ul>
+                    <li>درباره ما</li>
+                    <li>تماس با ما</li>
+                    <li>همکاری با ما</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>با ما در تماس باشید</h1>
+                <ul dir="rtl">
+                    <li>
+                        <i class="fa fa-home" style="margin-left: 7px;"></i> تهران، خیابان پوریا ولی
+                    </li>
+                    <li>
+                        <i class="fa fa-phone" style="margin-left: 7px;"></i>22325665
+                    </li>
+                    <li>
+                        <i class="fa fa-fax" style="margin-left: 7px;"></i>22312145
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope" style="margin-left: 7px;"></i>myShop@info.com
+                    </li>
+                </ul>
+            </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- End -->
 
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/Theme/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Theme/assets/js/owl.carousel.min.js"></script>
+    <script src="~/Theme/assets/js/productCarousel.js"></script>
+    <script src="~/Theme/assets/js/slideShow.js"></script>
+    @RenderSection("Scripts" , false)
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>

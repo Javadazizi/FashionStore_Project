@@ -1,0 +1,51 @@
+﻿@model List<_01_FashionStoreQuery.Contract.Product.ProductQueryModel>
+
+    <div class="Product-Wrapper">
+        <h1 style="text-align: center;">پرفروش ترین ها</h1>
+        <div class="owl-carousel owl-theme">
+
+            @foreach (var item in Model)
+            {
+                <div class="img-slider">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="~/ProductPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                            <div class="product-label">
+                                @if (item.HasDiscount) { 
+                                <span class="sale">
+                                    -@item.DiscountRate%
+                                </span>
+                                     }
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="product-body">
+                        <p class="product-category">
+                            @item.Category
+                        </p>
+                        <h3 class="product-name header-cart-item-name">
+                            <a href="#" tabindex="-1">
+                                ​​@item.ShortDescription
+                            </a>
+                        </h3>
+                        @if (item.HasDiscount)
+                        {
+                            <h4 class="product-price header-cart-item-info">
+                                @item.PriceWithDiscount
+                                <del class="product-old-price">
+                                    @item.Price
+                                </del>
+                            </h4>
+                        }
+                        else
+                        {
+                            <h4 class="product-price header-cart-item-info">@item.Price</h4>
+
+                                }
+                        </div>
+                </div>
+            }
+
+        </div>
+    </div>
